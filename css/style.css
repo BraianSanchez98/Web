@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Oswald:wght@200;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500;700&display=swap');
+
+:root
+{
+    --padding-conteiner: 100px 0;
+    --color-title:#ffffff;
+}
+
+
+body
+{
+    font-family: 'Fascinate', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+.conteiner
+{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--padding-conteiner);
+}
+
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    color: #ffffff;
+    margin: 0 auto;
+    background:url(../img/font-menu.jpg) center no-repeat;
+    background-size: cover;
+}
+
+
+.hero::before
+{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/1.png) no-repeat;
+    background-position:50%;
+    background-size: contain;
+    animation: visibility 2s linear ;
+}
+@keyframes visibility
+{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.nav
+{
+    --padding-conteiner: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo
+{
+    font-family: 'Oswald', sans-serif;
+    font-style: oblique;
+    font-size: 1.5em;
+    animation: jump 2s linear infinite;
+    opacity: 50%;
+    text-decoration-line:underline;
+    text-decoration-color: rgb(255, 140, 0);
+}
+
+@keyframes jump{
+
+    0%,100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(10px);
+    }
+}
+
+.nav-title
+{
+    font-weight: 900;
+}
+
+.menu
+{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.log .nav-img
+{
+    height: 100%;
+    width: 100%;
+}
+.nav-link
+{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+.nav-links
+{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-item
+{
+    margin-left: auto;
+    list-style: none;
+}
+
+
+.nav-menu
+{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+.nav-img
+{
+    display: block;
+    width: 30px;
+}
+.nav-close
+{
+    display: var(--show, none);
+}
+
+.title
+{
+    max-height: 100vh;
+    display: grid;
+    --padding-conteiner:0;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 80%;
+    text-transform: uppercase;
+    margin-top: 350px;
+}
+
+.title .link
+{
+    position: relative;
+    left: auto;
+    top: 10px;
+}
+
+/* Main */
+
+.info
+{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    text-align: center;
+    background-color: #ffffff;
+    background-image: radial-gradient(#000000 0.9500000000000001px, #ffffff 0.9500000000000001px);
+    background-size: 19px 19px;
+}
+.info::before
+{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.text-main
+{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.info p
+{
+    line-height: 2;
+}
+
+.main-icons
+{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 40px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.main-conteiner
+{
+    display: grid;
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 90%;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+}
